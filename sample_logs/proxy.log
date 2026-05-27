@@ -1,0 +1,952 @@
+2026-04-17 17:42:02 | ERROR | ERROR | client=127.0.0.1:63109 | message=timed out
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 108, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 196, in forward_http_request
+    server_sock.connect((req.host, req.port))
+TimeoutError: timed out
+2026-04-17 17:42:19 | ERROR | ERROR | client=127.0.0.1:60408 | message=timed out
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 108, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 196, in forward_http_request
+    server_sock.connect((req.host, req.port))
+TimeoutError: timed out
+2026-04-17 17:44:13 | INFO | OK | client=127.0.0.1:63587 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=478 | cache=False | duration_ms=345
+2026-04-17 17:59:01 | INFO | OK | client=127.0.0.1:57430 | host=google.com:80 | method=GET | url=http://google.com/ | status=301 | bytes=792 | cache=False | duration_ms=168
+2026-04-18 00:06:14 | INFO | OK | client=127.0.0.1:60535 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=478 | cache=False | duration_ms=668
+2026-04-18 15:47:16 | INFO | BLOCKED | client=127.0.0.1:58052 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-18 15:48:56 | INFO | OK | client=127.0.0.1:60792 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=544
+2026-04-18 15:49:06 | INFO | CACHE_HIT | client=127.0.0.1:60795 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=1
++2026-04-18 18:31:34 | INFO | OK | client=127.0.0.1:61173 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=447
+2026-04-18 18:32:31 | INFO | CACHE_HIT | client=127.0.0.1:50787 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=0
+2026-04-18 18:34:02 | ERROR | ERROR | client=127.0.0.1:49953 | message=[WinError 10054] An existing connection was forcibly closed by the remote host
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 110, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 29, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 47, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-04-18 18:34:38 | INFO | BLOCKED | client=127.0.0.1:59599 | host=example.com:443 | method=CONNECT | url=https://example.com:443
+2026-04-18 18:34:45 | INFO | TUNNEL | client=127.0.0.1:59600 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=686
+2026-04-18 18:35:59 | INFO | OK | client=127.0.0.1:60833 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=386
+2026-04-18 18:36:03 | INFO | CACHE_HIT | client=127.0.0.1:51669 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=0
+2026-04-18 18:59:18 | INFO | TUNNEL | client=127.0.0.1:56602 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=15024
+2026-04-18 19:00:45 | INFO | TUNNEL | client=127.0.0.1:53829 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=15034
+2026-04-18 19:01:53 | INFO | BLOCKED | client=127.0.0.1:53879 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-18 19:03:14 | INFO | OK | client=127.0.0.1:53899 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=542
+2026-04-18 19:03:15 | INFO | BLOCKED | client=127.0.0.1:53902 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-18 19:03:28 | INFO | OK | client=127.0.0.1:53906 | host=neverssl.com:80 | method=GET | url=http://neverssl.com/ | status=200 | bytes=4268 | cache=False | duration_ms=7656
+2026-04-18 19:04:20 | INFO | OK | client=127.0.0.1:64351 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=623
+2026-04-18 19:07:41 | INFO | OK | client=127.0.0.1:51239 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=588
+2026-04-18 21:14:48 | INFO | TUNNEL | client=127.0.0.1:57389 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=431
+2026-04-20 14:52:57 | INFO | OK | client=127.0.0.1:57706 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=479 | cache=False | duration_ms=450
+2026-04-20 14:53:32 | INFO | OK | client=127.0.0.1:61660 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=1260
+2026-04-20 14:54:19 | INFO | CACHE_HIT | client=127.0.0.1:51852 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=16
+2026-04-20 14:54:22 | INFO | CACHE_HIT | client=127.0.0.1:51853 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=0
+2026-04-20 14:55:42 | INFO | BLOCKED | client=127.0.0.1:64209 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-20 14:57:08 | INFO | BLOCKED | client=127.0.0.1:61771 | host=tiktok.com:80 | method=GET | url=http://tiktok.com/
+2026-04-20 14:57:27 | INFO | OK | client=127.0.0.1:60458 | host=tiktok.com:80 | method=GET | url=http://tiktok.com/ | status=301 | bytes=540 | cache=False | duration_ms=125
+2026-04-20 15:07:55 | INFO | TUNNEL | client=127.0.0.1:64820 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=15021
+2026-04-21 12:24:04 | INFO | OK | client=127.0.0.1:51275 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=972
+2026-04-21 12:24:40 | INFO | CACHE_HIT | client=127.0.0.1:64237 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=0
+2026-04-21 12:26:02 | INFO | BLOCKED | client=127.0.0.1:62195 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-21 12:28:52 | INFO | TUNNEL | client=127.0.0.1:52928 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=670
+2026-04-21 12:29:29 | INFO | TUNNEL | client=127.0.0.1:52931 | host=httpforever.com:443 | method=CONNECT | url=https://httpforever.com:443 | duration_ms=1000
+2026-04-21 12:32:22 | INFO | TUNNEL | client=127.0.0.1:51132 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=10773
+2026-04-21 12:32:55 | INFO | TUNNEL | client=127.0.0.1:57787 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=10447
+2026-04-21 12:37:15 | INFO | OK | client=127.0.0.1:49297 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=484
+2026-04-21 12:37:18 | INFO | CACHE_HIT | client=127.0.0.1:62085 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=0
+2026-04-21 12:44:43 | INFO | OK | client=127.0.0.1:50168 | host=tiktok.com:80 | method=GET | url=http://tiktok.com/ | status=301 | bytes=538 | cache=False | duration_ms=1191
+2026-04-21 12:45:33 | INFO | BLOCKED | client=127.0.0.1:52393 | host=tiktok.com:80 | method=GET | url=http://tiktok.com/
+2026-04-21 12:47:08 | INFO | TUNNEL | client=127.0.0.1:62009 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=10228
+2026-04-21 19:45:41 | INFO | OK | client=127.0.0.1:63189 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=479 | cache=False | duration_ms=286
+2026-04-21 22:47:11 | INFO | BLOCKED | client=127.0.0.1:58172 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-21 22:47:36 | INFO | BLOCKED | client=127.0.0.1:58179 | host=neverssl.com:80 | method=GET | url=http://neverssl.com/
+2026-04-21 22:47:57 | INFO | BLOCKED | client=127.0.0.1:58188 | host=iana.org:80 | method=GET | url=http://iana.org/
+2026-04-21 22:56:10 | INFO | BLOCKED | client=127.0.0.1:63463 | host=cursor-test.com:80 | method=GET | url=http://cursor-test.com/
+2026-04-24 13:23:18 | INFO | OK | client=127.0.0.1:53587 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=478 | cache=False | duration_ms=337
+2026-04-24 13:23:28 | INFO | OK | client=127.0.0.1:59368 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=2149
+2026-04-24 13:23:53 | INFO | CACHE_HIT | client=127.0.0.1:52821 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=0
+2026-04-24 13:24:16 | INFO | BLOCKED | client=127.0.0.1:62914 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-24 13:25:12 | INFO | OK | client=127.0.0.1:60827 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=450
+2026-04-24 13:25:18 | INFO | BLOCKED | client=127.0.0.1:60829 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-24 13:25:23 | INFO | BLOCKED | client=127.0.0.1:60830 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get
+2026-04-26 13:45:10 | INFO | OK | client=127.0.0.1:54336 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=1322
+2026-04-26 13:45:11 | INFO | TUNNEL | client=127.0.0.1:60747 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=237
+2026-04-26 13:45:11 | INFO | TUNNEL | client=127.0.0.1:64354 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=233
+2026-04-26 13:45:11 | INFO | OK | client=127.0.0.1:56165 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=1834
+2026-04-26 13:45:11 | INFO | OK | client=127.0.0.1:57932 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | status=200 | bytes=913 | cache=False | duration_ms=395
+2026-04-26 13:45:11 | INFO | OK | client=127.0.0.1:64026 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | status=200 | bytes=18693 | cache=False | duration_ms=589
+2026-04-26 13:45:12 | INFO | TUNNEL | client=127.0.0.1:54703 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=72
+2026-04-26 13:45:12 | INFO | TUNNEL | client=127.0.0.1:58634 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=72
+2026-04-26 13:45:12 | INFO | OK | client=127.0.0.1:59149 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | status=200 | bytes=1322 | cache=False | duration_ms=398
+2026-04-26 13:45:12 | INFO | OK | client=127.0.0.1:60594 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | status=200 | bytes=5108 | cache=False | duration_ms=392
+2026-04-26 13:45:12 | INFO | OK | client=127.0.0.1:53205 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | status=200 | bytes=1278 | cache=False | duration_ms=400
+2026-04-26 13:45:12 | INFO | OK | client=127.0.0.1:60358 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | status=200 | bytes=1272 | cache=False | duration_ms=409
+2026-04-26 13:45:39 | INFO | TUNNEL | client=127.0.0.1:60916 | host=ohttp-relay-safebrowsing-chrome.google.fastly-edge.com:443 | method=CONNECT | url=https://ohttp-relay-safebrowsing-chrome.google.fastly-edge.com:443 | duration_ms=30179
+2026-04-26 13:45:41 | INFO | TUNNEL | client=127.0.0.1:49841 | host=bam.nr-data.net:443 | method=CONNECT | url=https://bam.nr-data.net:443 | duration_ms=30331
+2026-04-26 13:45:42 | INFO | TUNNEL | client=127.0.0.1:58276 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=30154
+2026-04-26 13:45:42 | INFO | TUNNEL | client=127.0.0.1:57271 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=30193
+2026-04-26 13:45:42 | INFO | TUNNEL | client=127.0.0.1:50165 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=31387
+2026-04-26 13:45:42 | INFO | TUNNEL | client=127.0.0.1:59870 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=30220
+2026-04-26 13:45:58 | INFO | TUNNEL | client=127.0.0.1:52826 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=49370
+2026-04-26 13:45:58 | INFO | TUNNEL | client=127.0.0.1:62159 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=49502
+2026-04-26 13:45:58 | INFO | TUNNEL | client=127.0.0.1:58717 | host=lh3.google.com:443 | method=CONNECT | url=https://lh3.google.com:443 | duration_ms=49117
+2026-04-26 13:45:58 | INFO | TUNNEL | client=127.0.0.1:49961 | host=lh3.googleusercontent.com:443 | method=CONNECT | url=https://lh3.googleusercontent.com:443 | duration_ms=49010
+2026-04-26 13:45:58 | INFO | TUNNEL | client=127.0.0.1:53837 | host=ogads-pa.clients6.google.com:443 | method=CONNECT | url=https://ogads-pa.clients6.google.com:443 | duration_ms=49133
+2026-04-26 13:45:58 | INFO | TUNNEL | client=127.0.0.1:50821 | host=play.google.com:443 | method=CONNECT | url=https://play.google.com:443 | duration_ms=48169
+2026-04-26 13:46:19 | INFO | TUNNEL | client=127.0.0.1:55584 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=10211
+2026-04-26 13:46:31 | INFO | TUNNEL | client=127.0.0.1:61069 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=10132
+2026-04-26 13:46:34 | INFO | OK | client=127.0.0.1:63512 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=304 | bytes=760 | cache=False | duration_ms=510
+2026-04-26 13:46:41 | INFO | TUNNEL | client=127.0.0.1:60617 | host=eur.loki.delve.office.com:443 | method=CONNECT | url=https://eur.loki.delve.office.com:443 | duration_ms=30350
+2026-04-26 13:46:41 | INFO | TUNNEL | client=127.0.0.1:63461 | host=bam.nr-data.net:443 | method=CONNECT | url=https://bam.nr-data.net:443 | duration_ms=30253
+2026-04-26 13:46:41 | INFO | TUNNEL | client=127.0.0.1:64670 | host=teams.cloud.microsoft:443 | method=CONNECT | url=https://teams.cloud.microsoft:443 | duration_ms=30255
+2026-04-26 13:46:42 | INFO | TUNNEL | client=127.0.0.1:59716 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=10168
+2026-04-26 13:46:43 | ERROR | ERROR | client=127.0.0.1:52805 | message=timed out
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 111, in handle_client
+    raw_request = recv_http_message(client_sock)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 221, in recv_http_message
+    chunk = sock.recv(BUFFER_SIZE)
+            ^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+2026-04-26 13:46:43 | INFO | TUNNEL | client=127.0.0.1:61400 | host=eu-mobile.events.data.microsoft.com:443 | method=CONNECT | url=https://eu-mobile.events.data.microsoft.com:443 | duration_ms=30386
+2026-04-26 13:46:45 | ERROR | ERROR | client=127.0.0.1:53028 | message=[Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 170, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 276, in forward_http_request
+    server_sock.connect((req.host, req.port))
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2026-04-26 13:46:45 | INFO | OK | client=127.0.0.1:53026 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=304 | bytes=760 | cache=False | duration_ms=576
+2026-04-26 13:46:52 | INFO | TUNNEL | client=127.0.0.1:64688 | host=eu-office.events.data.microsoft.com:443 | method=CONNECT | url=https://eu-office.events.data.microsoft.com:443 | duration_ms=37059
+2026-04-26 13:46:52 | INFO | TUNNEL | client=127.0.0.1:50939 | host=chatgpt.com:443 | method=CONNECT | url=https://chatgpt.com:443 | duration_ms=105599
+2026-04-26 13:46:54 | INFO | TUNNEL | client=127.0.0.1:58585 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=10116
+2026-04-26 13:47:03 | INFO | TUNNEL | client=127.0.0.1:56335 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=30142
+2026-04-26 13:47:20 | INFO | TUNNEL | client=127.0.0.1:54142 | host=outlook.office.com:443 | method=CONNECT | url=https://outlook.office.com:443 | duration_ms=69553
+2026-04-26 13:47:27 | INFO | TUNNEL | client=127.0.0.1:49666 | host=eu-office.events.data.microsoft.com:443 | method=CONNECT | url=https://eu-office.events.data.microsoft.com:443 | duration_ms=30442
+2026-04-26 13:47:35 | INFO | TUNNEL | client=127.0.0.1:52632 | host=bam.nr-data.net:443 | method=CONNECT | url=https://bam.nr-data.net:443 | duration_ms=24312
+2026-04-26 13:47:35 | INFO | TUNNEL | client=127.0.0.1:54287 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=577
+2026-04-26 13:47:35 | INFO | TUNNEL | client=127.0.0.1:61506 | host=clientservices.googleapis.com:443 | method=CONNECT | url=https://clientservices.googleapis.com:443 | duration_ms=198
+2026-04-26 13:47:45 | INFO | TUNNEL | client=127.0.0.1:52634 | host=sadownload.mcafee.com:443 | method=CONNECT | url=https://sadownload.mcafee.com:443 | duration_ms=30285
+2026-04-26 13:47:57 | INFO | TUNNEL | client=127.0.0.1:54393 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=10191
+2026-04-26 13:48:03 | ERROR | ERROR | client=127.0.0.1:50074 | message=[WinError 10035] A non-blocking socket operation could not be completed immediately
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 89, in _relay_bidirectional
+    other.sendall(data)
+BlockingIOError: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2026-04-26 13:48:07 | INFO | TUNNEL | client=127.0.0.1:61976 | host=oauthaccountmanager.googleapis.com:443 | method=CONNECT | url=https://oauthaccountmanager.googleapis.com:443 | duration_ms=30342
+2026-04-26 13:48:07 | INFO | TUNNEL | client=127.0.0.1:58829 | host=lensfrontend-pa.googleapis.com:443 | method=CONNECT | url=https://lensfrontend-pa.googleapis.com:443 | duration_ms=30239
+2026-04-26 13:48:07 | ERROR | ERROR | client=127.0.0.1:49203 | message=[WinError 10035] A non-blocking socket operation could not be completed immediately
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 89, in _relay_bidirectional
+    other.sendall(data)
+BlockingIOError: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2026-04-26 13:48:09 | INFO | TUNNEL | client=127.0.0.1:64484 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=10137
+2026-04-26 13:48:18 | INFO | TUNNEL | client=127.0.0.1:58831 | host=config.teams.microsoft.com:443 | method=CONNECT | url=https://config.teams.microsoft.com:443 | duration_ms=31358
+2026-04-26 13:48:21 | INFO | TUNNEL | client=127.0.0.1:57871 | host=config.teams.microsoft.com:443 | method=CONNECT | url=https://config.teams.microsoft.com:443 | duration_ms=30627
+2026-04-26 13:48:22 | INFO | TUNNEL | client=127.0.0.1:56602 | host=main.vscode-cdn.net:443 | method=CONNECT | url=https://main.vscode-cdn.net:443 | duration_ms=30361
+2026-04-26 13:48:22 | INFO | TUNNEL | client=127.0.0.1:56604 | host=teams.events.data.microsoft.com:443 | method=CONNECT | url=https://teams.events.data.microsoft.com:443 | duration_ms=30575
+2026-04-26 13:48:22 | INFO | TUNNEL | client=127.0.0.1:56605 | host=teams.events.data.microsoft.com:443 | method=CONNECT | url=https://teams.events.data.microsoft.com:443 | duration_ms=30575
+2026-04-26 13:48:22 | INFO | TUNNEL | client=127.0.0.1:55007 | host=edge.skype.com:443 | method=CONNECT | url=https://edge.skype.com:443 | duration_ms=60228
+2026-04-26 13:48:23 | ERROR | ERROR | client=127.0.0.1:63668 | message=[WinError 10035] A non-blocking socket operation could not be completed immediately
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 89, in _relay_bidirectional
+    other.sendall(data)
+BlockingIOError: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2026-04-26 13:48:24 | INFO | TUNNEL | client=127.0.0.1:51653 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=10175
+2026-04-26 13:48:33 | INFO | TUNNEL | client=127.0.0.1:55993 | host=eu-mobile.events.data.microsoft.com:443 | method=CONNECT | url=https://eu-mobile.events.data.microsoft.com:443 | duration_ms=30348
+2026-04-26 13:48:35 | INFO | TUNNEL | client=127.0.0.1:60122 | host=elearn.lau.edu.lb:443 | method=CONNECT | url=https://elearn.lau.edu.lb:443 | duration_ms=30295
+2026-04-26 13:48:41 | INFO | TUNNEL | client=127.0.0.1:62161 | host=bam.nr-data.net:443 | method=CONNECT | url=https://bam.nr-data.net:443 | duration_ms=30370
+2026-04-26 13:48:41 | INFO | TUNNEL | client=127.0.0.1:51308 | host=bam.nr-data.net:443 | method=CONNECT | url=https://bam.nr-data.net:443 | duration_ms=30370
+2026-04-26 13:48:48 | INFO | TUNNEL | client=127.0.0.1:62936 | host=ssl.gstatic.com:443 | method=CONNECT | url=https://ssl.gstatic.com:443 | duration_ms=30207
+2026-04-26 13:48:50 | INFO | TUNNEL | client=127.0.0.1:56816 | host=docs.google.com:443 | method=CONNECT | url=https://docs.google.com:443 | duration_ms=30340
+2026-04-26 13:49:02 | INFO | TUNNEL | client=127.0.0.1:55989 | host=chatgpt.com:443 | method=CONNECT | url=https://chatgpt.com:443 | duration_ms=63974
+2026-04-26 13:49:05 | INFO | TUNNEL | client=127.0.0.1:63670 | host=eu-mobile.events.data.microsoft.com:443 | method=CONNECT | url=https://eu-mobile.events.data.microsoft.com:443 | duration_ms=30238
+2026-04-26 13:53:13 | INFO | OK | client=127.0.0.1:61982 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=456
+2026-04-26 13:53:13 | INFO | TUNNEL | client=127.0.0.1:61986 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=184
+2026-04-26 13:53:13 | INFO | TUNNEL | client=127.0.0.1:61985 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=184
+2026-04-26 13:53:13 | INFO | OK | client=127.0.0.1:61987 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=441
+2026-04-26 13:53:14 | INFO | OK | client=127.0.0.1:61993 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | status=200 | bytes=913 | cache=False | duration_ms=486
+2026-04-26 13:53:14 | INFO | OK | client=127.0.0.1:61992 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | status=200 | bytes=18693 | cache=False | duration_ms=701
+2026-04-26 13:53:14 | INFO | OK | client=127.0.0.1:61996 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | status=200 | bytes=5108 | cache=False | duration_ms=400
+2026-04-26 13:53:14 | INFO | TUNNEL | client=127.0.0.1:62010 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=169
+2026-04-26 13:53:14 | INFO | TUNNEL | client=127.0.0.1:62012 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=178
+2026-04-26 13:53:15 | INFO | OK | client=127.0.0.1:62003 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | status=200 | bytes=1272 | cache=False | duration_ms=405
+2026-04-26 13:53:15 | INFO | OK | client=127.0.0.1:62002 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | status=200 | bytes=1322 | cache=False | duration_ms=405
+2026-04-26 13:53:15 | INFO | OK | client=127.0.0.1:62005 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | status=200 | bytes=1278 | cache=False | duration_ms=405
+2026-04-26 13:53:44 | INFO | TUNNEL | client=127.0.0.1:61998 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=30152
+2026-04-26 13:53:44 | INFO | TUNNEL | client=127.0.0.1:62000 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=30198
+2026-04-26 13:53:44 | INFO | TUNNEL | client=127.0.0.1:61984 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=31513
+2026-04-26 13:53:44 | INFO | TUNNEL | client=127.0.0.1:62008 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=30167
+2026-04-26 13:54:05 | INFO | TUNNEL | client=127.0.0.1:50704 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=30724
+2026-04-26 13:54:06 | INFO | TUNNEL | client=127.0.0.1:50706 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30409
+2026-04-26 13:55:35 | INFO | OK | client=127.0.0.1:50722 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=1385
+2026-04-26 13:55:36 | INFO | TUNNEL | client=127.0.0.1:50725 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=149
+2026-04-26 13:55:36 | INFO | TUNNEL | client=127.0.0.1:50727 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=146
+2026-04-26 13:55:36 | INFO | OK | client=127.0.0.1:50729 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=466
+2026-04-26 13:55:36 | INFO | OK | client=127.0.0.1:50733 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | status=200 | bytes=913 | cache=False | duration_ms=405
+2026-04-26 13:55:36 | INFO | OK | client=127.0.0.1:50734 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-normal.min.css | status=200 | bytes=1123 | cache=False | duration_ms=405
+2026-04-26 13:55:37 | INFO | OK | client=127.0.0.1:50732 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | status=200 | bytes=18693 | cache=False | duration_ms=598
+2026-04-26 13:55:37 | INFO | TUNNEL | client=127.0.0.1:50749 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=176
+2026-04-26 13:55:37 | INFO | TUNNEL | client=127.0.0.1:50748 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=183
+2026-04-26 13:55:37 | INFO | OK | client=127.0.0.1:50740 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | status=200 | bytes=1322 | cache=False | duration_ms=501
+2026-04-26 13:55:37 | INFO | OK | client=127.0.0.1:50742 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | status=200 | bytes=1278 | cache=False | duration_ms=493
+2026-04-26 13:55:37 | INFO | OK | client=127.0.0.1:50741 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | status=200 | bytes=1272 | cache=False | duration_ms=501
+2026-04-26 13:56:04 | INFO | TUNNEL | client=127.0.0.1:50720 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30400
+2026-04-26 13:56:07 | INFO | TUNNEL | client=127.0.0.1:50738 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=30198
+2026-04-26 13:56:07 | INFO | TUNNEL | client=127.0.0.1:50724 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=31444
+2026-04-26 13:56:07 | INFO | TUNNEL | client=127.0.0.1:50746 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=30174
+2026-04-26 13:57:12 | INFO | TUNNEL | client=127.0.0.1:50752 | host=aus5.mozilla.org:443 | method=CONNECT | url=https://aus5.mozilla.org:443 | duration_ms=30263
+2026-04-26 13:57:12 | INFO | TUNNEL | client=127.0.0.1:50755 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=30575
+2026-04-29 14:24:12 | INFO | OK | client=127.0.0.1:61006 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=479 | cache=False | duration_ms=577
+2026-04-29 14:26:24 | INFO | OK | client=127.0.0.1:57240 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=658
+2026-04-29 14:26:36 | INFO | CACHE_HIT | client=127.0.0.1:57242 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=0
+2026-04-29 14:29:49 | INFO | TUNNEL | client=127.0.0.1:62312 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=566
+2026-04-29 14:31:44 | INFO | BLOCKED | client=127.0.0.1:63808 | host=example.com:443 | method=CONNECT | url=https://example.com:443
+2026-04-29 14:33:08 | INFO | BLOCKED | client=127.0.0.1:54908 | host=example.com:443 | method=CONNECT | url=https://example.com:443
+2026-04-29 14:35:27 | INFO | OK | client=127.0.0.1:59312 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/canonical.html | status=200 | bytes=317 | cache=False | duration_ms=130
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59318 | host=safebrowsing.googleapis.com:443 | method=CONNECT | url=https://safebrowsing.googleapis.com:443 | duration_ms=444
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59330 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=16
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59323 | host=www.firefox.com:443 | method=CONNECT | url=https://www.firefox.com:443 | duration_ms=427
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59325 | host=prod.ohttp-gateway.prod.webservices.mozgcp.net:443 | method=CONNECT | url=https://prod.ohttp-gateway.prod.webservices.mozgcp.net:443 | duration_ms=391
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59321 | host=firefox-settings-attachments.cdn.mozilla.net:443 | method=CONNECT | url=https://firefox-settings-attachments.cdn.mozilla.net:443 | duration_ms=483
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59315 | host=firefox.settings.services.mozilla.com:443 | method=CONNECT | url=https://firefox.settings.services.mozilla.com:443 | duration_ms=739
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59327 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=298
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59311 | host=www.mozilla.org:443 | method=CONNECT | url=https://www.mozilla.org:443 | duration_ms=775
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59308 | host=content-signature-2.cdn.mozilla.net:443 | method=CONNECT | url=https://content-signature-2.cdn.mozilla.net:443 | duration_ms=1538
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59317 | host=ads.mozilla.org:443 | method=CONNECT | url=https://ads.mozilla.org:443 | duration_ms=645
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59329 | host=transcend-cdn.com:443 | method=CONNECT | url=https://transcend-cdn.com:443 | duration_ms=276
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59333 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=378
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59336 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=365
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59350 | host=www.firefox.com:443 | method=CONNECT | url=https://www.firefox.com:443 | duration_ms=152
+2026-04-29 14:35:28 | INFO | TUNNEL | client=127.0.0.1:59349 | host=www.firefox.com:443 | method=CONNECT | url=https://www.firefox.com:443 | duration_ms=156
+2026-04-29 14:35:28 | INFO | OK | client=127.0.0.1:59360 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv4 | status=200 | bytes=235 | cache=False | duration_ms=125
+2026-04-29 14:35:28 | INFO | OK | client=127.0.0.1:59361 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv6 | status=200 | bytes=235 | cache=False | duration_ms=118
+2026-04-29 14:35:31 | INFO | TUNNEL | client=127.0.0.1:59376 | host=safebrowsing.googleapis.com:443 | method=CONNECT | url=https://safebrowsing.googleapis.com:443 | duration_ms=531
+2026-04-29 14:35:33 | INFO | TUNNEL | client=127.0.0.1:59380 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=25
+2026-04-29 14:35:56 | INFO | TUNNEL | client=127.0.0.1:59397 | host=versioncheck-bg.addons.mozilla.org:443 | method=CONNECT | url=https://versioncheck-bg.addons.mozilla.org:443 | duration_ms=216
+2026-04-29 14:35:58 | INFO | TUNNEL | client=127.0.0.1:59340 | host=normandy.cdn.mozilla.net:443 | method=CONNECT | url=https://normandy.cdn.mozilla.net:443 | duration_ms=30201
+2026-04-29 14:35:59 | INFO | TUNNEL | client=127.0.0.1:59355 | host=assets.mozilla.net:443 | method=CONNECT | url=https://assets.mozilla.net:443 | duration_ms=30435
+2026-04-29 14:35:59 | INFO | TUNNEL | client=127.0.0.1:59341 | host=transcend-cdn.com:443 | method=CONNECT | url=https://transcend-cdn.com:443 | duration_ms=30577
+2026-04-29 14:35:59 | INFO | TUNNEL | client=127.0.0.1:59365 | host=transcend-cdn.com:443 | method=CONNECT | url=https://transcend-cdn.com:443 | duration_ms=30184
+2026-04-29 14:35:59 | INFO | TUNNEL | client=127.0.0.1:59347 | host=www.googletagmanager.com:443 | method=CONNECT | url=https://www.googletagmanager.com:443 | duration_ms=30665
+2026-04-29 14:35:59 | INFO | TUNNEL | client=127.0.0.1:59342 | host=www.firefox.com:443 | method=CONNECT | url=https://www.firefox.com:443 | duration_ms=31134
+2026-04-29 14:36:00 | INFO | TUNNEL | client=127.0.0.1:59367 | host=firefox-settings-attachments.cdn.mozilla.net:443 | method=CONNECT | url=https://firefox-settings-attachments.cdn.mozilla.net:443 | duration_ms=31621
+2026-04-29 14:36:03 | INFO | TUNNEL | client=127.0.0.1:59358 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=34267
+2026-04-29 14:36:03 | INFO | TUNNEL | client=127.0.0.1:59374 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=33037
+2026-04-29 14:36:03 | INFO | TUNNEL | client=127.0.0.1:59378 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30162
+2026-04-29 14:36:05 | INFO | TUNNEL | client=127.0.0.1:59371 | host=www.google-analytics.com:443 | method=CONNECT | url=https://www.google-analytics.com:443 | duration_ms=35165
+2026-04-29 14:36:12 | INFO | TUNNEL | client=127.0.0.1:59384 | host=versioncheck.addons.mozilla.org:443 | method=CONNECT | url=https://versioncheck.addons.mozilla.org:443 | duration_ms=30249
+2026-04-29 14:36:12 | INFO | TUNNEL | client=127.0.0.1:59385 | host=download.mozilla.org:443 | method=CONNECT | url=https://download.mozilla.org:443 | duration_ms=30322
+2026-04-29 14:36:12 | INFO | TUNNEL | client=127.0.0.1:59388 | host=addons.mozilla.org:443 | method=CONNECT | url=https://addons.mozilla.org:443 | duration_ms=30455
+2026-04-29 14:36:14 | INFO | TUNNEL | client=127.0.0.1:59392 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30531
+2026-04-29 14:36:14 | INFO | TUNNEL | client=127.0.0.1:59390 | host=download-installer.cdn.mozilla.net:443 | method=CONNECT | url=https://download-installer.cdn.mozilla.net:443 | duration_ms=32238
+2026-04-29 14:36:19 | INFO | TUNNEL | client=127.0.0.1:59404 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=27
+2026-04-29 14:36:26 | INFO | TUNNEL | client=127.0.0.1:59369 | host=firefox.settings.services.mozilla.com:443 | method=CONNECT | url=https://firefox.settings.services.mozilla.com:443 | duration_ms=56750
+2026-04-29 14:36:26 | INFO | TUNNEL | client=127.0.0.1:59395 | host=services.addons.mozilla.org:443 | method=CONNECT | url=https://services.addons.mozilla.org:443 | duration_ms=30214
+2026-04-29 14:36:26 | INFO | TUNNEL | client=127.0.0.1:59407 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=461
+2026-04-29 14:36:26 | INFO | TUNNEL | client=127.0.0.1:59357 | host=classify-client.services.mozilla.com:443 | method=CONNECT | url=https://classify-client.services.mozilla.com:443 | duration_ms=57906
+2026-04-29 14:36:26 | INFO | TUNNEL | client=127.0.0.1:59338 | host=content-signature-2.cdn.mozilla.net:443 | method=CONNECT | url=https://content-signature-2.cdn.mozilla.net:443 | duration_ms=58397
+2026-04-29 14:36:26 | INFO | TUNNEL | client=127.0.0.1:59398 | host=versioncheck-bg.addons.mozilla.org:443 | method=CONNECT | url=https://versioncheck-bg.addons.mozilla.org:443 | duration_ms=30228
+2026-04-29 14:36:26 | INFO | TUNNEL | client=127.0.0.1:59345 | host=aus5.mozilla.org:443 | method=CONNECT | url=https://aus5.mozilla.org:443 | duration_ms=58433
+2026-04-29 14:36:28 | INFO | OK | client=127.0.0.1:59411 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/canonical.html | status=200 | bytes=317 | cache=False | duration_ms=121
+2026-04-29 14:36:28 | INFO | OK | client=127.0.0.1:59413 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv4 | status=200 | bytes=235 | cache=False | duration_ms=107
+2026-04-29 14:36:28 | INFO | OK | client=127.0.0.1:59414 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv6 | status=200 | bytes=235 | cache=False | duration_ms=135
+2026-04-29 14:36:49 | INFO | TUNNEL | client=127.0.0.1:59402 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30174
+2026-04-29 14:36:56 | INFO | TUNNEL | client=127.0.0.1:59408 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=30389
+2026-04-29 14:37:00 | INFO | TUNNEL | client=127.0.0.1:59419 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30578
+2026-04-29 14:37:00 | INFO | TUNNEL | client=127.0.0.1:59423 | host=firefox.settings.services.mozilla.com:443 | method=CONNECT | url=https://firefox.settings.services.mozilla.com:443 | duration_ms=30191
+2026-04-29 14:37:01 | INFO | TUNNEL | client=127.0.0.1:59421 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=31012
+2026-04-29 14:37:01 | INFO | TUNNEL | client=127.0.0.1:59417 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=32874
+2026-04-29 14:37:05 | INFO | TUNNEL | client=127.0.0.1:59430 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=16
+2026-04-29 14:37:14 | INFO | TUNNEL | client=127.0.0.1:59425 | host=aus5.mozilla.org:443 | method=CONNECT | url=https://aus5.mozilla.org:443 | duration_ms=30274
+2026-04-29 14:37:35 | INFO | TUNNEL | client=127.0.0.1:59428 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30184
+2026-04-29 14:37:47 | INFO | TUNNEL | client=127.0.0.1:59432 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30698
+2026-04-29 14:37:47 | INFO | TUNNEL | client=127.0.0.1:59434 | host=firefox.settings.services.mozilla.com:443 | method=CONNECT | url=https://firefox.settings.services.mozilla.com:443 | duration_ms=30207
+2026-04-29 14:37:53 | INFO | TUNNEL | client=127.0.0.1:49674 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=8
+2026-04-29 14:38:23 | INFO | TUNNEL | client=127.0.0.1:49667 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30274
+2026-04-29 14:38:34 | INFO | TUNNEL | client=127.0.0.1:49678 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30519
+2026-04-29 14:38:34 | INFO | TUNNEL | client=127.0.0.1:49680 | host=firefox.settings.services.mozilla.com:443 | method=CONNECT | url=https://firefox.settings.services.mozilla.com:443 | duration_ms=30183
+2026-04-29 14:38:40 | INFO | TUNNEL | client=127.0.0.1:49706 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=7
+2026-04-29 14:38:58 | INFO | TUNNEL | client=127.0.0.1:49682 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=30400
+2026-04-29 14:39:01 | INFO | TUNNEL | client=127.0.0.1:49699 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=30225
+2026-04-29 14:39:01 | INFO | TUNNEL | client=127.0.0.1:49689 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=30397
+2026-04-29 14:39:04 | INFO | TUNNEL | client=127.0.0.1:49702 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30412
+2026-04-29 14:39:10 | INFO | TUNNEL | client=127.0.0.1:49704 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30189
+2026-04-29 14:39:21 | INFO | TUNNEL | client=127.0.0.1:60466 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30715
+2026-04-29 14:39:27 | INFO | TUNNEL | client=127.0.0.1:63522 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=24
+2026-04-29 14:39:57 | INFO | TUNNEL | client=127.0.0.1:63520 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30203
+2026-04-29 14:40:09 | INFO | TUNNEL | client=127.0.0.1:57619 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30624
+2026-04-29 14:40:14 | INFO | TUNNEL | client=127.0.0.1:57630 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=15
+2026-04-29 14:40:43 | INFO | TUNNEL | client=127.0.0.1:57622 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=30266
+2026-04-29 14:40:44 | INFO | TUNNEL | client=127.0.0.1:57628 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30181
+2026-04-29 14:40:55 | INFO | TUNNEL | client=127.0.0.1:57069 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30591
+2026-04-29 14:40:58 | INFO | TUNNEL | client=127.0.0.1:57074 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30392
+2026-04-29 14:41:01 | INFO | TUNNEL | client=127.0.0.1:61037 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=24
+2026-04-29 14:41:31 | INFO | TUNNEL | client=127.0.0.1:61035 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30192
+2026-04-29 14:41:42 | INFO | TUNNEL | client=127.0.0.1:61039 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30719
+2026-04-29 14:41:47 | INFO | TUNNEL | client=127.0.0.1:61054 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=35
+2026-04-29 14:42:12 | INFO | TUNNEL | client=127.0.0.1:61045 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=30457
+2026-04-29 14:42:14 | INFO | TUNNEL | client=127.0.0.1:61050 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30411
+2026-04-29 14:42:17 | INFO | TUNNEL | client=127.0.0.1:61052 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30268
+2026-04-29 14:42:28 | INFO | TUNNEL | client=127.0.0.1:61057 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30622
+2026-04-29 14:42:34 | INFO | TUNNEL | client=127.0.0.1:56975 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=14
+2026-04-29 14:43:04 | INFO | TUNNEL | client=127.0.0.1:56973 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30195
+2026-04-29 14:43:16 | INFO | TUNNEL | client=127.0.0.1:56977 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30540
+2026-04-29 14:43:22 | INFO | TUNNEL | client=127.0.0.1:56984 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=28
+2026-04-29 14:43:52 | INFO | TUNNEL | client=127.0.0.1:56982 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30180
+2026-04-29 14:44:03 | INFO | TUNNEL | client=127.0.0.1:64581 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30525
+2026-04-29 14:44:08 | INFO | TUNNEL | client=127.0.0.1:58097 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=28
+2026-04-29 14:44:38 | INFO | TUNNEL | client=127.0.0.1:58095 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30191
+2026-04-29 14:44:50 | INFO | TUNNEL | client=127.0.0.1:53131 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30704
+2026-04-29 14:44:56 | INFO | TUNNEL | client=127.0.0.1:60068 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=29
+2026-04-29 14:45:26 | INFO | TUNNEL | client=127.0.0.1:60066 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30195
+2026-04-29 14:45:38 | INFO | TUNNEL | client=127.0.0.1:60070 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30540
+2026-04-29 14:45:43 | INFO | TUNNEL | client=127.0.0.1:60076 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=22
+2026-04-29 14:46:13 | INFO | TUNNEL | client=127.0.0.1:60074 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30194
+2026-04-29 14:46:25 | INFO | TUNNEL | client=127.0.0.1:60078 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30696
+2026-04-29 14:46:28 | INFO | TUNNEL | client=127.0.0.1:60081 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30485
+2026-04-29 14:46:31 | INFO | TUNNEL | client=127.0.0.1:60088 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=17
+2026-04-29 14:47:01 | INFO | TUNNEL | client=127.0.0.1:60086 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30178
+2026-04-29 14:47:13 | INFO | TUNNEL | client=127.0.0.1:60090 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30622
+2026-04-29 14:47:18 | INFO | TUNNEL | client=127.0.0.1:54565 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=15
+2026-04-29 14:47:43 | INFO | TUNNEL | client=127.0.0.1:54579 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=6064
+2026-04-29 14:47:43 | INFO | TUNNEL | client=127.0.0.1:54563 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=25219
+2026-04-29 14:47:43 | INFO | TUNNEL | client=127.0.0.1:54570 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=12211
+2026-04-29 14:47:43 | INFO | TUNNEL | client=127.0.0.1:54573 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=9470
+2026-04-29 14:47:44 | INFO | OK | client=127.0.0.1:52660 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=514
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52664 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52666 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52667 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52668 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52674 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52678 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52671 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52670 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52669 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52682 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52691 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52684 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52685 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52683 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52696 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52692 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52700 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52697 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52701 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52707 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52702 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52714 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52709 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52710 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52708 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | INFO | CACHE_HIT | client=127.0.0.1:52721 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52715 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52716 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | ERROR | ERROR | client=127.0.0.1:52717 | message=[WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 78, in _relay_bidirectional
+    data = s.recv(BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-04-29 14:47:44 | INFO | OK | client=127.0.0.1:52662 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=406
+2026-04-29 14:47:44 | INFO | OK | client=127.0.0.1:52672 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=401
+2026-04-29 14:47:44 | INFO | TUNNEL | client=127.0.0.1:52723 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=156
+2026-04-29 14:47:44 | INFO | TUNNEL | client=127.0.0.1:52722 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=194
+2026-04-29 14:47:44 | INFO | OK | client=127.0.0.1:52686 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=406
+2026-04-29 14:47:45 | INFO | OK | client=127.0.0.1:52725 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=393
+2026-04-29 14:47:45 | INFO | OK | client=127.0.0.1:52731 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | status=200 | bytes=913 | cache=False | duration_ms=405
+2026-04-29 14:47:45 | INFO | OK | client=127.0.0.1:52730 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | status=200 | bytes=18693 | cache=False | duration_ms=610
+2026-04-29 14:47:46 | INFO | OK | client=127.0.0.1:52734 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | status=200 | bytes=5108 | cache=False | duration_ms=393
+2026-04-29 14:47:46 | INFO | TUNNEL | client=127.0.0.1:52740 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=186
+2026-04-29 14:47:46 | INFO | TUNNEL | client=127.0.0.1:52741 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=191
+2026-04-29 14:47:46 | INFO | OK | client=127.0.0.1:52745 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | status=200 | bytes=1272 | cache=False | duration_ms=398
+2026-04-29 14:47:46 | INFO | OK | client=127.0.0.1:52743 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | status=200 | bytes=1322 | cache=False | duration_ms=402
+2026-04-29 14:47:46 | INFO | OK | client=127.0.0.1:52746 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | status=200 | bytes=1278 | cache=False | duration_ms=397
+2026-04-29 14:47:59 | INFO | TUNNEL | client=127.0.0.1:54567 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30724
+2026-04-29 14:48:05 | INFO | TUNNEL | client=127.0.0.1:52754 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=12
+2026-04-29 14:48:15 | INFO | TUNNEL | client=127.0.0.1:52736 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=30152
+2026-04-29 14:48:15 | INFO | TUNNEL | client=127.0.0.1:52738 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=30213
+2026-04-29 14:48:16 | INFO | TUNNEL | client=127.0.0.1:52724 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=31381
+2026-04-29 14:48:16 | INFO | TUNNEL | client=127.0.0.1:52742 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=30197
+2026-04-29 14:48:35 | INFO | TUNNEL | client=127.0.0.1:52752 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30192
+2026-04-29 14:48:47 | INFO | TUNNEL | client=127.0.0.1:52756 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30718
+2026-04-29 14:48:53 | INFO | TUNNEL | client=127.0.0.1:52761 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=32
+2026-04-29 14:49:23 | INFO | TUNNEL | client=127.0.0.1:52759 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30202
+2026-04-29 14:49:28 | INFO | TUNNEL | client=127.0.0.1:52763 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=30277
+2026-04-29 14:49:34 | INFO | TUNNEL | client=127.0.0.1:52773 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30638
+2026-04-29 14:49:40 | INFO | TUNNEL | client=127.0.0.1:61062 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=16
+2026-04-29 14:50:10 | INFO | TUNNEL | client=127.0.0.1:61060 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30188
+2026-04-29 14:50:21 | INFO | TUNNEL | client=127.0.0.1:61064 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30542
+2026-04-29 14:50:26 | INFO | TUNNEL | client=127.0.0.1:49798 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=8
+2026-04-29 14:50:56 | INFO | TUNNEL | client=127.0.0.1:49785 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=35347
+2026-04-29 14:50:56 | INFO | TUNNEL | client=127.0.0.1:49796 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30183
+2026-04-29 14:51:00 | INFO | TUNNEL | client=127.0.0.1:49787 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=36544
+2026-04-29 14:51:07 | INFO | TUNNEL | client=127.0.0.1:49800 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30678
+2026-04-29 14:51:13 | INFO | TUNNEL | client=127.0.0.1:63867 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=15
+2026-04-29 14:51:23 | INFO | TUNNEL | client=127.0.0.1:63872 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=3321
+2026-04-29 14:51:23 | INFO | TUNNEL | client=127.0.0.1:63865 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=10950
+2026-04-29 14:51:23 | INFO | TUNNEL | client=127.0.0.1:63869 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=8805
+2026-04-29 14:51:24 | INFO | OK | client=127.0.0.1:63881 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=725
+2026-04-29 14:51:25 | INFO | OK | client=127.0.0.1:63887 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=537
+2026-04-29 14:51:27 | INFO | TUNNEL | client=127.0.0.1:63885 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=3387
+2026-04-29 14:51:27 | INFO | TUNNEL | client=127.0.0.1:63886 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=3387
+2026-04-29 14:51:28 | INFO | OK | client=127.0.0.1:63895 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | status=200 | bytes=913 | cache=False | duration_ms=486
+2026-04-29 14:51:28 | INFO | OK | client=127.0.0.1:63894 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | status=200 | bytes=18693 | cache=False | duration_ms=688
+2026-04-29 14:51:29 | INFO | OK | client=127.0.0.1:63898 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | status=200 | bytes=5108 | cache=False | duration_ms=397
+2026-04-29 14:51:29 | INFO | TUNNEL | client=127.0.0.1:63909 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=171
+2026-04-29 14:51:29 | INFO | TUNNEL | client=127.0.0.1:63911 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=175
+2026-04-29 14:51:29 | INFO | OK | client=127.0.0.1:63904 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | status=200 | bytes=1322 | cache=False | duration_ms=398
+2026-04-29 14:51:29 | INFO | OK | client=127.0.0.1:63906 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | status=200 | bytes=1278 | cache=False | duration_ms=398
+2026-04-29 14:51:30 | INFO | OK | client=127.0.0.1:63905 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | status=200 | bytes=1272 | cache=False | duration_ms=1513
+2026-04-29 14:51:41 | INFO | TUNNEL | client=127.0.0.1:63900 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=13152
+2026-04-29 14:51:41 | INFO | TUNNEL | client=127.0.0.1:63917 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=2825
+2026-04-29 14:51:41 | INFO | TUNNEL | client=127.0.0.1:63884 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=17301
+2026-04-29 14:51:41 | INFO | TUNNEL | client=127.0.0.1:63912 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=12919
+2026-04-29 14:51:41 | INFO | CACHE_HIT | client=127.0.0.1:63919 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:51:41 | INFO | TUNNEL | client=127.0.0.1:63901 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=13156
+2026-04-29 14:51:41 | INFO | CACHE_HIT | client=127.0.0.1:63921 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | bytes=1841 | duration_ms=0
+2026-04-29 14:51:42 | INFO | TUNNEL | client=127.0.0.1:63892 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=17111
+2026-04-29 14:51:42 | INFO | CACHE_HIT | client=127.0.0.1:63923 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | bytes=18693 | duration_ms=0
+2026-04-29 14:51:42 | INFO | CACHE_HIT | client=127.0.0.1:63924 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | bytes=913 | duration_ms=0
+2026-04-29 14:51:42 | INFO | CACHE_HIT | client=127.0.0.1:63925 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | bytes=5108 | duration_ms=0
+2026-04-29 14:51:42 | INFO | CACHE_HIT | client=127.0.0.1:63928 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | bytes=1322 | duration_ms=0
+2026-04-29 14:51:42 | INFO | CACHE_HIT | client=127.0.0.1:63930 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | bytes=1272 | duration_ms=0
+2026-04-29 14:51:42 | INFO | CACHE_HIT | client=127.0.0.1:63932 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | bytes=1278 | duration_ms=0
+2026-04-29 14:51:54 | INFO | TUNNEL | client=127.0.0.1:63879 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30820
+2026-04-29 14:51:59 | INFO | TUNNEL | client=127.0.0.1:63935 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=32
+2026-04-29 14:52:12 | INFO | TUNNEL | client=127.0.0.1:63926 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=30204
+2026-04-29 14:52:12 | INFO | TUNNEL | client=127.0.0.1:63920 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=30533
+2026-04-29 14:52:12 | INFO | TUNNEL | client=127.0.0.1:63929 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=30225
+2026-04-29 14:52:29 | INFO | TUNNEL | client=127.0.0.1:63933 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30175
+2026-04-29 14:52:41 | INFO | TUNNEL | client=127.0.0.1:63937 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30652
+2026-04-29 14:52:46 | INFO | TUNNEL | client=127.0.0.1:62195 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=15
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52094 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=6086
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52090 | host=play.google.com:443 | method=CONNECT | url=https://play.google.com:443 | duration_ms=10071
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52087 | host=ogads-pa.clients6.google.com:443 | method=CONNECT | url=https://ogads-pa.clients6.google.com:443 | duration_ms=11084
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52082 | host=csp.withgoogle.com:443 | method=CONNECT | url=https://csp.withgoogle.com:443 | duration_ms=11392
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52086 | host=ogads-pa.clients6.google.com:443 | method=CONNECT | url=https://ogads-pa.clients6.google.com:443 | duration_ms=11084
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52083 | host=www.gstatic.com:443 | method=CONNECT | url=https://www.gstatic.com:443 | duration_ms=11392
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:62193 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=27087
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52078 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=11751
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52091 | host=play.google.com:443 | method=CONNECT | url=https://play.google.com:443 | duration_ms=10086
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52080 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=11416
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52074 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=14390
+2026-04-29 14:53:13 | INFO | TUNNEL | client=127.0.0.1:52076 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=11962
+2026-04-29 14:53:28 | INFO | TUNNEL | client=127.0.0.1:52071 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30657
+2026-04-29 14:53:34 | INFO | TUNNEL | client=127.0.0.1:52110 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=25
+2026-04-29 14:53:43 | INFO | TUNNEL | client=127.0.0.1:52098 | host=csp.withgoogle.com:443 | method=CONNECT | url=https://csp.withgoogle.com:443 | duration_ms=30218
+2026-04-29 14:53:44 | INFO | TUNNEL | client=127.0.0.1:52103 | host=ogads-pa.clients6.google.com:443 | method=CONNECT | url=https://ogads-pa.clients6.google.com:443 | duration_ms=30165
+2026-04-29 14:53:44 | INFO | TUNNEL | client=127.0.0.1:52102 | host=ogads-pa.clients6.google.com:443 | method=CONNECT | url=https://ogads-pa.clients6.google.com:443 | duration_ms=30366
+2026-04-29 14:53:44 | INFO | TUNNEL | client=127.0.0.1:52100 | host=www.gstatic.com:443 | method=CONNECT | url=https://www.gstatic.com:443 | duration_ms=30718
+2026-04-29 14:53:45 | INFO | TUNNEL | client=127.0.0.1:52106 | host=play.google.com:443 | method=CONNECT | url=https://play.google.com:443 | duration_ms=30183
+2026-04-29 14:53:45 | INFO | TUNNEL | client=127.0.0.1:52096 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=32316
+2026-04-29 14:54:04 | INFO | TUNNEL | client=127.0.0.1:52108 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30192
+2026-04-29 14:54:11 | INFO | BLOCKED | client=127.0.0.1:52119 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-29 14:54:11 | INFO | BLOCKED | client=127.0.0.1:52122 | host=example.com:80 | method=GET | url=http://example.com/favicon.ico
+2026-04-29 14:54:16 | INFO | TUNNEL | client=127.0.0.1:52112 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30536
+2026-04-29 14:54:21 | INFO | TUNNEL | client=127.0.0.1:52127 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=27
+2026-04-29 14:54:38 | INFO | TUNNEL | client=127.0.0.1:52115 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=30315
+2026-04-29 14:54:38 | INFO | TUNNEL | client=127.0.0.1:52117 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=30241
+2026-04-29 14:54:41 | INFO | TUNNEL | client=127.0.0.1:52120 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=30490
+2026-04-29 14:54:42 | INFO | TUNNEL | client=127.0.0.1:52123 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30425
+2026-04-29 14:54:51 | INFO | TUNNEL | client=127.0.0.1:52125 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30181
+2026-04-29 14:55:03 | INFO | TUNNEL | client=127.0.0.1:62369 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30658
+2026-04-29 14:55:09 | INFO | TUNNEL | client=127.0.0.1:63976 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=25
+2026-04-29 14:55:39 | INFO | TUNNEL | client=127.0.0.1:63974 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30191
+2026-04-29 14:55:51 | INFO | TUNNEL | client=127.0.0.1:63979 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30704
+2026-04-29 14:55:56 | INFO | TUNNEL | client=127.0.0.1:56845 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=22
+2026-04-29 14:56:01 | INFO | TUNNEL | client=127.0.0.1:63983 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30473
+2026-04-29 14:56:26 | INFO | TUNNEL | client=127.0.0.1:56843 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30198
+2026-04-29 14:56:38 | INFO | TUNNEL | client=127.0.0.1:56847 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30551
+2026-04-29 14:56:44 | INFO | TUNNEL | client=127.0.0.1:61438 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=25
+2026-04-29 14:56:53 | INFO | TUNNEL | client=127.0.0.1:56850 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=30276
+2026-04-29 14:57:14 | INFO | TUNNEL | client=127.0.0.1:61436 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30198
+2026-04-29 14:57:25 | INFO | TUNNEL | client=127.0.0.1:61440 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30713
+2026-04-29 14:57:27 | INFO | BLOCKED | client=127.0.0.1:49723 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443
+2026-04-29 14:57:27 | INFO | BLOCKED | client=127.0.0.1:49728 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443
+2026-04-29 14:57:27 | INFO | BLOCKED | client=127.0.0.1:49729 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443
+2026-04-29 14:57:29 | INFO | BLOCKED | client=127.0.0.1:49733 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443
+2026-04-29 14:57:29 | INFO | BLOCKED | client=127.0.0.1:49734 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443
+2026-04-29 14:57:29 | INFO | BLOCKED | client=127.0.0.1:49735 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443
+2026-04-29 14:57:30 | INFO | BLOCKED | client=127.0.0.1:49737 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443
+2026-04-29 14:57:31 | INFO | OK | client=127.0.0.1:49736 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=430
+2026-04-29 14:57:31 | INFO | BLOCKED | client=127.0.0.1:49739 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443
+2026-04-29 14:57:31 | INFO | BLOCKED | client=127.0.0.1:49740 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443
+2026-04-29 14:57:31 | INFO | BLOCKED | client=127.0.0.1:49741 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443
+2026-04-29 14:57:31 | INFO | OK | client=127.0.0.1:49742 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=584
+2026-04-29 14:57:32 | INFO | OK | client=127.0.0.1:49744 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | status=200 | bytes=5108 | cache=False | duration_ms=404
+2026-04-29 14:57:36 | INFO | CACHE_HIT | client=127.0.0.1:49746 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-29 14:57:36 | INFO | BLOCKED | client=127.0.0.1:49747 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443
+2026-04-29 14:57:36 | INFO | BLOCKED | client=127.0.0.1:49748 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443
+2026-04-29 14:57:36 | INFO | BLOCKED | client=127.0.0.1:49749 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443
+2026-04-29 14:57:36 | INFO | BLOCKED | client=127.0.0.1:49751 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443
+2026-04-29 14:57:41 | INFO | BLOCKED | client=127.0.0.1:49752 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443
+2026-04-29 14:58:01 | INFO | BLOCKED | client=127.0.0.1:56183 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443
+2026-04-29 14:58:17 | INFO | BLOCKED | client=127.0.0.1:57524 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443
+2026-04-29 14:58:21 | INFO | BLOCKED | client=127.0.0.1:57525 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get
+2026-04-29 14:58:21 | INFO | BLOCKED | client=127.0.0.1:57526 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443
+2026-04-29 14:58:21 | INFO | BLOCKED | client=127.0.0.1:57527 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/favicon.ico
+2026-04-29 14:58:21 | INFO | BLOCKED | client=127.0.0.1:57528 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443
+2026-04-29 14:58:21 | INFO | BLOCKED | client=127.0.0.1:57529 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443
+2026-04-29 14:58:24 | INFO | BLOCKED | client=127.0.0.1:57530 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443
+2026-04-29 14:58:24 | INFO | BLOCKED | client=127.0.0.1:57531 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443
+2026-04-29 14:58:24 | INFO | BLOCKED | client=127.0.0.1:57532 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443
+2026-04-29 14:58:41 | INFO | BLOCKED | client=127.0.0.1:57533 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443
+2026-04-29 14:59:28 | INFO | BLOCKED | client=127.0.0.1:57535 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443
+2026-04-29 16:09:20 | INFO | OK | client=127.0.0.1:57244 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/canonical.html | status=200 | bytes=317 | cache=False | duration_ms=135
+2026-04-29 16:09:20 | INFO | OK | client=127.0.0.1:57247 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv6 | status=200 | bytes=235 | cache=False | duration_ms=91
+2026-04-29 16:09:20 | INFO | OK | client=127.0.0.1:57246 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv4 | status=200 | bytes=235 | cache=False | duration_ms=92
+2026-04-29 16:10:15 | INFO | TUNNEL | client=127.0.0.1:64295 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=10101
+2026-04-29 16:11:04 | INFO | TUNNEL | client=127.0.0.1:63081 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=10087
+2026-04-30 13:54:32 | INFO | OK | client=127.0.0.1:58656 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=479 | cache=False | duration_ms=547
+2026-04-30 13:56:01 | INFO | OK | client=127.0.0.1:53321 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=678
+2026-04-30 13:56:03 | INFO | CACHE_HIT | client=127.0.0.1:53323 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=1
+2026-04-30 13:57:57 | INFO | TUNNEL | client=127.0.0.1:57423 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=264
+2026-04-30 13:58:35 | ERROR | ERROR | client=127.0.0.1:62432 | message=[WinError 10035] A non-blocking socket operation could not be completed immediately
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 89, in _relay_bidirectional
+    other.sendall(data)
+BlockingIOError: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2026-04-30 14:00:10 | INFO | BLOCKED | client=127.0.0.1:63989 | host=example.com:443 | method=CONNECT | url=https://example.com:443
+2026-04-30 14:01:09 | INFO | TUNNEL | client=127.0.0.1:59989 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=10135
+2026-04-30 14:01:49 | INFO | TUNNEL | client=127.0.0.1:58933 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=10133
+2026-04-30 14:02:30 | INFO | OK | client=127.0.0.1:52358 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=479 | cache=False | duration_ms=454
+2026-04-30 14:02:35 | INFO | TUNNEL | client=127.0.0.1:52355 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=10129
+2026-04-30 14:02:55 | INFO | OK | client=127.0.0.1:49677 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/canonical.html | status=200 | bytes=317 | cache=False | duration_ms=167
+2026-04-30 14:02:55 | INFO | TUNNEL | client=127.0.0.1:49680 | host=content-signature-2.cdn.mozilla.net:443 | method=CONNECT | url=https://content-signature-2.cdn.mozilla.net:443 | duration_ms=237
+2026-04-30 14:02:55 | INFO | TUNNEL | client=127.0.0.1:49688 | host=content-signature-2.cdn.mozilla.net:443 | method=CONNECT | url=https://content-signature-2.cdn.mozilla.net:443 | duration_ms=230
+2026-04-30 14:02:55 | INFO | TUNNEL | client=127.0.0.1:49702 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=56
+2026-04-30 14:02:56 | INFO | OK | client=127.0.0.1:49709 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv6 | status=200 | bytes=235 | cache=False | duration_ms=112
+2026-04-30 14:02:56 | INFO | OK | client=127.0.0.1:49708 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv4 | status=200 | bytes=235 | cache=False | duration_ms=115
+2026-04-30 14:03:04 | INFO | TUNNEL | client=127.0.0.1:49729 | host=firefox-settings-attachments.cdn.mozilla.net:443 | method=CONNECT | url=https://firefox-settings-attachments.cdn.mozilla.net:443 | duration_ms=278
+2026-04-30 14:03:04 | INFO | TUNNEL | client=127.0.0.1:49733 | host=firefox-settings-attachments.cdn.mozilla.net:443 | method=CONNECT | url=https://firefox-settings-attachments.cdn.mozilla.net:443 | duration_ms=278
+2026-04-30 14:03:04 | INFO | TUNNEL | client=127.0.0.1:49731 | host=firefox-settings-attachments.cdn.mozilla.net:443 | method=CONNECT | url=https://firefox-settings-attachments.cdn.mozilla.net:443 | duration_ms=278
+2026-04-30 14:03:04 | INFO | TUNNEL | client=127.0.0.1:49732 | host=firefox-settings-attachments.cdn.mozilla.net:443 | method=CONNECT | url=https://firefox-settings-attachments.cdn.mozilla.net:443 | duration_ms=326
+2026-04-30 14:03:04 | INFO | TUNNEL | client=127.0.0.1:49734 | host=firefox-settings-attachments.cdn.mozilla.net:443 | method=CONNECT | url=https://firefox-settings-attachments.cdn.mozilla.net:443 | duration_ms=422
+2026-04-30 14:03:26 | INFO | TUNNEL | client=127.0.0.1:49700 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30291
+2026-04-30 14:03:26 | INFO | TUNNEL | client=127.0.0.1:49696 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30510
+2026-04-30 14:03:29 | INFO | TUNNEL | client=127.0.0.1:49721 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=31186
+2026-04-30 14:03:31 | INFO | TUNNEL | client=127.0.0.1:49723 | host=archive.mozilla.org:443 | method=CONNECT | url=https://archive.mozilla.org:443 | duration_ms=31017
+2026-04-30 14:03:31 | INFO | TUNNEL | client=127.0.0.1:49727 | host=services.addons.mozilla.org:443 | method=CONNECT | url=https://services.addons.mozilla.org:443 | duration_ms=30264
+2026-04-30 14:03:32 | INFO | TUNNEL | client=127.0.0.1:49725 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30817
+2026-04-30 14:03:32 | INFO | TUNNEL | client=127.0.0.1:49706 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=35657
+2026-04-30 14:03:33 | INFO | TUNNEL | client=127.0.0.1:49679 | host=content-signature-2.cdn.mozilla.net:443 | method=CONNECT | url=https://content-signature-2.cdn.mozilla.net:443 | duration_ms=38266
+2026-04-30 14:03:33 | INFO | TUNNEL | client=127.0.0.1:49694 | host=firefox.settings.services.mozilla.com:443 | method=CONNECT | url=https://firefox.settings.services.mozilla.com:443 | duration_ms=38342
+2026-04-30 14:03:34 | INFO | TUNNEL | client=127.0.0.1:49730 | host=firefox-settings-attachments.cdn.mozilla.net:443 | method=CONNECT | url=https://firefox-settings-attachments.cdn.mozilla.net:443 | duration_ms=30329
+2026-04-30 14:03:37 | INFO | TUNNEL | client=127.0.0.1:61966 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=79
+2026-04-30 14:03:42 | INFO | TUNNEL | client=127.0.0.1:61986 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=81
+2026-04-30 14:03:42 | INFO | TUNNEL | client=127.0.0.1:61988 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=548
+2026-04-30 14:03:44 | INFO | TUNNEL | client=127.0.0.1:61987 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=2763
+2026-04-30 14:03:44 | INFO | TUNNEL | client=127.0.0.1:61974 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=5216
+2026-04-30 14:03:44 | INFO | TUNNEL | client=127.0.0.1:61964 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=7114
+2026-04-30 14:03:44 | INFO | TUNNEL | client=127.0.0.1:62856 | host=classify-client.services.mozilla.com:443 | method=CONNECT | url=https://classify-client.services.mozilla.com:443 | duration_ms=18040
+2026-04-30 14:03:44 | INFO | TUNNEL | client=127.0.0.1:62854 | host=normandy.cdn.mozilla.net:443 | method=CONNECT | url=https://normandy.cdn.mozilla.net:443 | duration_ms=18366
+2026-04-30 14:03:44 | INFO | TUNNEL | client=127.0.0.1:49704 | host=aus5.mozilla.org:443 | method=CONNECT | url=https://aus5.mozilla.org:443 | duration_ms=48578
+2026-04-30 14:03:45 | INFO | OK | client=127.0.0.1:62001 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=408
+2026-04-30 14:03:45 | INFO | OK | client=127.0.0.1:62007 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=395
+2026-04-30 14:03:46 | INFO | OK | client=127.0.0.1:62013 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | status=200 | bytes=913 | cache=False | duration_ms=392
+2026-04-30 14:03:46 | INFO | OK | client=127.0.0.1:62011 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | status=200 | bytes=18693 | cache=False | duration_ms=588
+2026-04-30 14:03:46 | INFO | OK | client=127.0.0.1:62016 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | status=200 | bytes=5108 | cache=False | duration_ms=401
+2026-04-30 14:03:46 | INFO | TUNNEL | client=127.0.0.1:62023 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=211
+2026-04-30 14:03:46 | INFO | TUNNEL | client=127.0.0.1:62022 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=211
+2026-04-30 14:03:46 | INFO | OK | client=127.0.0.1:62027 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | status=200 | bytes=1272 | cache=False | duration_ms=390
+2026-04-30 14:03:46 | INFO | OK | client=127.0.0.1:62024 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | status=200 | bytes=1322 | cache=False | duration_ms=406
+2026-04-30 14:03:46 | INFO | OK | client=127.0.0.1:62026 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | status=200 | bytes=1278 | cache=False | duration_ms=406
+2026-04-30 14:03:48 | INFO | TUNNEL | client=127.0.0.1:62039 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=64
+2026-04-30 14:03:55 | INFO | OK | client=127.0.0.1:62042 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/canonical.html | status=200 | bytes=317 | cache=False | duration_ms=137
+2026-04-30 14:03:55 | INFO | OK | client=127.0.0.1:62044 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv4 | status=200 | bytes=235 | cache=False | duration_ms=105
+2026-04-30 14:03:55 | INFO | OK | client=127.0.0.1:62045 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv6 | status=200 | bytes=235 | cache=False | duration_ms=105
+2026-04-30 14:04:16 | INFO | TUNNEL | client=127.0.0.1:62017 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=30274
+2026-04-30 14:04:16 | INFO | TUNNEL | client=127.0.0.1:62006 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=31316
+2026-04-30 14:04:16 | INFO | TUNNEL | client=127.0.0.1:62021 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=30268
+2026-04-30 14:04:18 | INFO | TUNNEL | client=127.0.0.1:62037 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30245
+2026-04-30 14:04:29 | INFO | TUNNEL | client=127.0.0.1:64898 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=31336
+2026-04-30 14:04:32 | INFO | TUNNEL | client=127.0.0.1:64896 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=35743
+2026-04-30 14:04:38 | INFO | TUNNEL | client=127.0.0.1:64910 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30611
+2026-04-30 14:04:44 | INFO | TUNNEL | client=127.0.0.1:64925 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=87
+2026-04-30 14:04:47 | INFO | TUNNEL | client=127.0.0.1:64923 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=4083
+2026-04-30 14:04:47 | INFO | TUNNEL | client=127.0.0.1:64921 | host=www.google.com:443 | method=CONNECT | url=https://www.google.com:443 | duration_ms=8863
+2026-04-30 14:04:48 | INFO | OK | client=127.0.0.1:64932 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=768
+2026-04-30 14:04:49 | INFO | OK | client=127.0.0.1:64935 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=481
+2026-04-30 14:04:49 | INFO | OK | client=127.0.0.1:64939 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | status=200 | bytes=913 | cache=False | duration_ms=497
+2026-04-30 14:04:49 | INFO | OK | client=127.0.0.1:64938 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | status=200 | bytes=18693 | cache=False | duration_ms=704
+2026-04-30 14:04:50 | INFO | OK | client=127.0.0.1:64942 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | status=200 | bytes=5108 | cache=False | duration_ms=412
+2026-04-30 14:04:50 | INFO | OK | client=127.0.0.1:64947 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | status=200 | bytes=1272 | cache=False | duration_ms=405
+2026-04-30 14:04:50 | INFO | OK | client=127.0.0.1:64948 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | status=200 | bytes=1278 | cache=False | duration_ms=405
+2026-04-30 14:04:50 | INFO | OK | client=127.0.0.1:64946 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | status=200 | bytes=1322 | cache=False | duration_ms=413
+2026-04-30 14:04:54 | INFO | TUNNEL | client=127.0.0.1:64944 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=4690
+2026-04-30 14:04:54 | INFO | TUNNEL | client=127.0.0.1:64952 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=4406
+2026-04-30 14:04:54 | INFO | TUNNEL | client=127.0.0.1:64934 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=5900
+2026-04-30 14:04:54 | INFO | CACHE_HIT | client=127.0.0.1:64955 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=0
+2026-04-30 14:04:54 | INFO | CACHE_HIT | client=127.0.0.1:64957 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | bytes=1841 | duration_ms=0
+2026-04-30 14:04:54 | INFO | CACHE_HIT | client=127.0.0.1:64961 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | bytes=18693 | duration_ms=0
+2026-04-30 14:04:54 | INFO | CACHE_HIT | client=127.0.0.1:64962 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | bytes=913 | duration_ms=0
+2026-04-30 14:04:54 | INFO | CACHE_HIT | client=127.0.0.1:64963 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | bytes=5108 | duration_ms=0
+2026-04-30 14:04:54 | INFO | TUNNEL | client=127.0.0.1:64966 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=72
+2026-04-30 14:04:55 | INFO | CACHE_HIT | client=127.0.0.1:64968 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | bytes=1322 | duration_ms=0
+2026-04-30 14:04:55 | INFO | CACHE_HIT | client=127.0.0.1:64969 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | bytes=1272 | duration_ms=0
+2026-04-30 14:04:55 | INFO | CACHE_HIT | client=127.0.0.1:64970 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | bytes=1278 | duration_ms=0
+2026-04-30 14:05:24 | INFO | TUNNEL | client=127.0.0.1:64958 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30250
+2026-04-30 14:05:25 | INFO | TUNNEL | client=127.0.0.1:64964 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=30285
+2026-04-30 14:05:25 | INFO | TUNNEL | client=127.0.0.1:64956 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=30449
+2026-04-30 14:05:25 | INFO | TUNNEL | client=127.0.0.1:64971 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=30311
+2026-04-30 14:05:29 | INFO | TUNNEL | client=127.0.0.1:64975 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=32720
+2026-04-30 14:05:29 | INFO | TUNNEL | client=127.0.0.1:64973 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=33353
+2026-04-30 14:05:46 | INFO | TUNNEL | client=127.0.0.1:64799 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30635
+2026-04-30 14:05:47 | INFO | TUNNEL | client=127.0.0.1:64801 | host=firefox.settings.services.mozilla.com:443 | method=CONNECT | url=https://firefox.settings.services.mozilla.com:443 | duration_ms=30300
+2026-04-30 14:05:52 | INFO | TUNNEL | client=127.0.0.1:54979 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=75
+2026-04-30 14:05:54 | INFO | BLOCKED | client=127.0.0.1:54982 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-30 14:06:22 | INFO | TUNNEL | client=127.0.0.1:54977 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30250
+2026-04-30 14:06:24 | INFO | TUNNEL | client=127.0.0.1:54983 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=30394
+2026-04-30 14:06:29 | INFO | TUNNEL | client=127.0.0.1:52734 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30440
+2026-04-30 14:06:34 | INFO | TUNNEL | client=127.0.0.1:57180 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=31000
+2026-04-30 14:06:40 | INFO | TUNNEL | client=127.0.0.1:51637 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=64
+2026-04-30 14:07:10 | INFO | TUNNEL | client=127.0.0.1:51634 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30236
+2026-04-30 14:07:22 | INFO | TUNNEL | client=127.0.0.1:51646 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30803
+2026-04-30 14:07:28 | INFO | TUNNEL | client=127.0.0.1:51652 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=74
+2026-04-30 14:07:58 | INFO | TUNNEL | client=127.0.0.1:51650 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30273
+2026-04-30 14:08:10 | INFO | TUNNEL | client=127.0.0.1:51654 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30814
+2026-04-30 14:08:16 | INFO | TUNNEL | client=127.0.0.1:51662 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=72
+2026-04-30 14:08:32 | INFO | TUNNEL | client=127.0.0.1:51658 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30565
+2026-04-30 14:08:46 | INFO | TUNNEL | client=127.0.0.1:51660 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30258
+2026-04-30 14:08:58 | INFO | TUNNEL | client=127.0.0.1:61259 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=31186
+2026-04-30 14:09:01 | ERROR | ERROR | client=127.0.0.1:51711 | message=[WinError 10035] A non-blocking socket operation could not be completed immediately
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 89, in _relay_bidirectional
+    other.sendall(data)
+BlockingIOError: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2026-04-30 14:09:04 | INFO | TUNNEL | client=127.0.0.1:51715 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=66
+2026-04-30 14:09:34 | INFO | TUNNEL | client=127.0.0.1:51713 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30257
+2026-04-30 14:09:46 | INFO | TUNNEL | client=127.0.0.1:51717 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30807
+2026-04-30 14:09:52 | INFO | TUNNEL | client=127.0.0.1:51722 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=83
+2026-04-30 14:10:22 | INFO | TUNNEL | client=127.0.0.1:51720 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30361
+2026-04-30 14:10:33 | INFO | TUNNEL | client=127.0.0.1:51724 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30719
+2026-04-30 14:10:39 | INFO | TUNNEL | client=127.0.0.1:51729 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=83
+2026-04-30 14:11:09 | INFO | TUNNEL | client=127.0.0.1:51727 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30263
+2026-04-30 14:11:20 | INFO | TUNNEL | client=127.0.0.1:51731 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30627
+2026-04-30 14:11:27 | INFO | TUNNEL | client=127.0.0.1:51787 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=74
+2026-04-30 14:11:57 | INFO | TUNNEL | client=127.0.0.1:51785 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30264
+2026-04-30 14:12:09 | INFO | TUNNEL | client=127.0.0.1:59083 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30652
+2026-04-30 14:12:15 | INFO | TUNNEL | client=127.0.0.1:51092 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=61
+2026-04-30 14:12:45 | INFO | TUNNEL | client=127.0.0.1:51090 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30329
+2026-04-30 14:12:57 | INFO | TUNNEL | client=127.0.0.1:51094 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=30826
+2026-04-30 14:13:03 | INFO | TUNNEL | client=127.0.0.1:53070 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=74
+2026-04-30 14:59:13 | INFO | BLOCKED | client=127.0.0.1:51664 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get
+2026-04-30 14:59:28 | INFO | OK | client=127.0.0.1:57242 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=479 | cache=False | duration_ms=391
+2026-04-30 15:00:04 | INFO | OK | client=127.0.0.1:50438 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=486
+2026-04-30 15:00:05 | INFO | CACHE_HIT | client=127.0.0.1:50440 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=5943 | duration_ms=0
+2026-04-30 15:00:59 | INFO | BLOCKED | client=127.0.0.1:59466 | host=example.com:80 | method=GET | url=http://example.com/
+2026-04-30 15:01:09 | INFO | BLOCKED | client=127.0.0.1:59468 | host=tiktok.com:80 | method=GET | url=http://tiktok.com/
+2026-04-30 15:01:37 | INFO | OK | client=127.0.0.1:53308 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=5943 | cache=False | duration_ms=389
+2026-04-30 15:02:11 | INFO | BLOCKED | client=127.0.0.1:60283 | host=google.com:443 | method=CONNECT | url=https://google.com:443
+2026-04-30 15:02:32 | INFO | TUNNEL | client=127.0.0.1:53207 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=311
+2026-04-30 15:03:12 | INFO | BLOCKED | client=127.0.0.1:57086 | host=example.com:443 | method=CONNECT | url=https://example.com:443
+2026-04-30 15:04:26 | INFO | TUNNEL | client=127.0.0.1:58203 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=30577
+2026-04-30 15:04:53 | INFO | OK | client=127.0.0.1:62543 | host=httpbin.org:80 | method=GET | url=http://httpbin.org/get | status=200 | bytes=479 | cache=False | duration_ms=560
+2026-04-30 15:05:00 | INFO | TUNNEL | client=127.0.0.1:62540 | host=google.com:443 | method=CONNECT | url=https://google.com:443 | duration_ms=10209
+2026-04-30 15:06:48 | INFO | TUNNEL | client=127.0.0.1:59119 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=3617
+2026-04-30 15:06:49 | INFO | OK | client=127.0.0.1:57774 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | status=200 | bytes=2751 | cache=False | duration_ms=398
+2026-04-30 15:06:49 | INFO | TUNNEL | client=127.0.0.1:57776 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=75
+2026-04-30 15:06:49 | INFO | TUNNEL | client=127.0.0.1:57777 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=79
+2026-04-30 15:06:49 | INFO | OK | client=127.0.0.1:57779 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | status=200 | bytes=1841 | cache=False | duration_ms=453
+2026-04-30 15:06:49 | INFO | OK | client=127.0.0.1:57785 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | status=200 | bytes=913 | cache=False | duration_ms=389
+2026-04-30 15:06:50 | INFO | OK | client=127.0.0.1:57784 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | status=200 | bytes=18693 | cache=False | duration_ms=582
+2026-04-30 15:06:50 | INFO | OK | client=127.0.0.1:57791 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | status=200 | bytes=5108 | cache=False | duration_ms=405
+2026-04-30 15:06:50 | INFO | TUNNEL | client=127.0.0.1:57805 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=227
+2026-04-30 15:06:50 | INFO | TUNNEL | client=127.0.0.1:57803 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=240
+2026-04-30 15:06:50 | INFO | OK | client=127.0.0.1:57797 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | status=200 | bytes=1322 | cache=False | duration_ms=401
+2026-04-30 15:06:50 | INFO | OK | client=127.0.0.1:57798 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | status=200 | bytes=1272 | cache=False | duration_ms=401
+2026-04-30 15:06:50 | INFO | OK | client=127.0.0.1:57799 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | status=200 | bytes=1278 | cache=False | duration_ms=396
+2026-04-30 15:06:56 | INFO | TUNNEL | client=127.0.0.1:57810 | host=incoming.telemetry.mozilla.org:443 | method=CONNECT | url=https://incoming.telemetry.mozilla.org:443 | duration_ms=2091
+2026-04-30 15:06:56 | INFO | TUNNEL | client=127.0.0.1:57793 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=6037
+2026-04-30 15:06:56 | INFO | TUNNEL | client=127.0.0.1:57800 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=5756
+2026-04-30 15:06:56 | INFO | TUNNEL | client=127.0.0.1:57778 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=7104
+2026-04-30 15:06:56 | INFO | TUNNEL | client=127.0.0.1:57788 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=6573
+2026-04-30 15:06:56 | INFO | TUNNEL | client=127.0.0.1:57794 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=6040
+2026-04-30 15:06:56 | INFO | CACHE_HIT | client=127.0.0.1:57812 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/ | bytes=2751 | duration_ms=1
+2026-04-30 15:06:56 | INFO | CACHE_HIT | client=127.0.0.1:57814 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/js/init.min.js | bytes=1841 | duration_ms=0
+2026-04-30 15:06:56 | INFO | CACHE_HIT | client=127.0.0.1:57816 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style.min.css | bytes=18693 | duration_ms=0
+2026-04-30 15:06:56 | INFO | CACHE_HIT | client=127.0.0.1:57817 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/style-wide.min.css | bytes=913 | duration_ms=0
+2026-04-30 15:06:56 | INFO | CACHE_HIT | client=127.0.0.1:57818 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/favicon.ico | bytes=5108 | duration_ms=0
+2026-04-30 15:06:56 | INFO | CACHE_HIT | client=127.0.0.1:57821 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/banner.svg | bytes=1322 | duration_ms=0
+2026-04-30 15:06:56 | INFO | CACHE_HIT | client=127.0.0.1:57822 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-light.svg | bytes=1272 | duration_ms=2
+2026-04-30 15:06:56 | INFO | CACHE_HIT | client=127.0.0.1:57823 | host=httpforever.com:80 | method=GET | url=http://httpforever.com/css/images/header-major-on-dark.svg | bytes=1278 | duration_ms=0
+2026-04-30 15:07:10 | ERROR | ERROR | client=127.0.0.1:52542 | message=[WinError 10035] A non-blocking socket operation could not be completed immediately
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 48, in tunnel_connect
+    _relay_bidirectional(client_sock, remote)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 89, in _relay_bidirectional
+    other.sendall(data)
+BlockingIOError: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2026-04-30 15:07:26 | INFO | TUNNEL | client=127.0.0.1:57819 | host=fonts.googleapis.com:443 | method=CONNECT | url=https://fonts.googleapis.com:443 | duration_ms=30272
+2026-04-30 15:07:26 | INFO | TUNNEL | client=127.0.0.1:57813 | host=cdnjs.cloudflare.com:443 | method=CONNECT | url=https://cdnjs.cloudflare.com:443 | duration_ms=30438
+2026-04-30 15:07:26 | INFO | TUNNEL | client=127.0.0.1:57824 | host=fonts.gstatic.com:443 | method=CONNECT | url=https://fonts.gstatic.com:443 | duration_ms=30272
+2026-04-30 15:07:27 | INFO | TUNNEL | client=127.0.0.1:57826 | host=mozilla-ohttp.fastly-edge.com:443 | method=CONNECT | url=https://mozilla-ohttp.fastly-edge.com:443 | duration_ms=30931
+2026-04-30 16:03:04 | ERROR | ERROR | client=127.0.0.1:57359 | message=[WinError 10054] An existing connection was forcibly closed by the remote host
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 111, in handle_client
+    raw_request = recv_http_message(client_sock)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 221, in recv_http_message
+    chunk = sock.recv(BUFFER_SIZE)
+            ^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-04-30 16:03:04 | ERROR | ERROR | client=127.0.0.1:57360 | message=[WinError 10054] An existing connection was forcibly closed by the remote host
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 111, in handle_client
+    raw_request = recv_http_message(client_sock)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 221, in recv_http_message
+    chunk = sock.recv(BUFFER_SIZE)
+            ^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-04-30 16:03:05 | ERROR | ERROR | client=127.0.0.1:53669 | message=[Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 170, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 276, in forward_http_request
+    server_sock.connect((req.host, req.port))
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2026-04-30 16:03:05 | ERROR | ERROR | client=127.0.0.1:53670 | message=[Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 170, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 276, in forward_http_request
+    server_sock.connect((req.host, req.port))
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2026-04-30 16:03:05 | ERROR | ERROR | client=127.0.0.1:53671 | message=[Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 170, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 276, in forward_http_request
+    server_sock.connect((req.host, req.port))
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2026-04-30 16:03:05 | ERROR | ERROR | client=127.0.0.1:53672 | message=[Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 170, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 276, in forward_http_request
+    server_sock.connect((req.host, req.port))
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2026-04-30 16:03:05 | ERROR | ERROR | client=127.0.0.1:53673 | message=[Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 170, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 276, in forward_http_request
+    server_sock.connect((req.host, req.port))
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2026-04-30 16:52:14 | ERROR | ERROR | client=127.0.0.1:53677 | message=[Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 170, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 276, in forward_http_request
+    server_sock.connect((req.host, req.port))
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2026-04-30 16:52:14 | ERROR | ERROR | client=127.0.0.1:53676 | message=[Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 170, in handle_client
+    response_bytes = forward_http_request(req)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 276, in forward_http_request
+    server_sock.connect((req.host, req.port))
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2026-04-30 16:52:15 | ERROR | ERROR | client=127.0.0.1:53684 | message=[Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_server.py", line 143, in handle_client
+    tunnel_connect(client_sock, client_addr, req.host, req.port)
+  File "C:\assil\LAU\sem 5 (spring 2026)\networks\Project\proxy_https.py", line 41, in tunnel_connect
+    remote.connect((host, port))
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2026-04-30 16:52:15 | INFO | OK | client=127.0.0.1:53685 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/canonical.html | status=200 | bytes=317 | cache=False | duration_ms=119
+2026-04-30 16:52:15 | INFO | OK | client=127.0.0.1:53687 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv6 | status=200 | bytes=235 | cache=False | duration_ms=109
+2026-04-30 16:52:15 | INFO | OK | client=127.0.0.1:53686 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv4 | status=200 | bytes=235 | cache=False | duration_ms=127
+2026-04-30 16:52:15 | INFO | OK | client=127.0.0.1:53693 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv4 | status=200 | bytes=235 | cache=False | duration_ms=100
+2026-04-30 16:52:15 | INFO | OK | client=127.0.0.1:53694 | host=detectportal.firefox.com:80 | method=GET | url=http://detectportal.firefox.com/success.txt?ipv6 | status=200 | bytes=235 | cache=False | duration_ms=100
+2026-04-30 16:52:15 | INFO | TUNNEL | client=127.0.0.1:53697 | host=push.services.mozilla.com:443 | method=CONNECT | url=https://push.services.mozilla.com:443 | duration_ms=15
+2026-04-30 16:52:26 | INFO | TUNNEL | client=127.0.0.1:57849 | host=safebrowsing.googleapis.com:443 | method=CONNECT | url=https://safebrowsing.googleapis.com:443 | duration_ms=2492
